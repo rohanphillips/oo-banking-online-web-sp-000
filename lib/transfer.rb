@@ -9,6 +9,6 @@ class Transfer
   end
 
   def valid?
-    @sender.valid? && @sender.balance > amount
+    @sender.valid? && @sender.balance > amount && @receiver.valid?
   end
 end
