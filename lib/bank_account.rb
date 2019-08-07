@@ -5,4 +5,6 @@ class BankAccount
     @balance = 1000.00
     @status = "open"
   end
+
+  
 end
