@@ -9,6 +9,12 @@ class Transfer
     @status = "pending"
   end
 
+  def reverse_transfer
+    @receiver.balance -= @amount
+    @sender.balance += @amount
+    @status = "reversed"
+  end
+
   def valid?
     @sender.valid? && @sender.balance > @amount && @receiver.valid?
   end
